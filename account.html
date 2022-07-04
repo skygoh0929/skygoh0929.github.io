@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ACCOUNT - SAVZ CLOTHING</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <a name="top"></a>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html"><h1>Savz</h1></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="productspage.html">Products</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="account.html">Account</a></li>
+                        </ul>
+                    </nav>
+                    <img src="cart.png" class="cart-icon">
+                    <img src="menu.png" class="menu-icon">
+                </div>
+                <hr>
+            </div>
+        </div> 
+
+        <div class="center">
+            <main>
+                <h1 id="login-header">Login</h1>
+                <div id="login-error-msg-holder">
+                    <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+                </div>
+    
+                <form id="login-form">
+                    <div class="text-section">
+                        <input type="text" name="username" id="username-field" class="login-form-field" required>
+                        <span></span>
+                        <label>Username</label>
+                    </div>
+                    <div class="text-section">
+                        <input type="password" name="password" id="password-field" class="login-form-field" required>
+                        <span></span>
+                        <label>Password</label>
+                    </div>
+                    <br>
+                    <div class="forget-password-section">Forgot Password?</div>
+                        <input type="submit" value="Login" id="login-form-submit">
+                    <div class="register-link">
+                        Not a member? <a href="#">Register here</a>
+                    </div>
+                </form>
+            </main>
+        </div>
+    
+        <script>
+            const loginForm = document.getElementById("login-form");
+            const loginButton = document.getElementById("login-form-submit");
+            const loginErrorMsg = document.getElementById("login-error-msg");
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+            const username = loginForm.username.value;
+            const password = loginForm.password.value;
+
+                if (username === "SAVZ" && password === "1234") {
+                    alert("You have successfully logged in.");
+                    location.reload();
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                }
+            })
+        </script>
+      
+        <div class="container-footer"><hr>
+            <a name="top"></a>
+            <footer class="footer">
+                <br>
+                <div class="row">
+                    <div class="column" >
+                        <h3>Customer Support & Contact Info</h3>
+                        <span class="animate-border border-black"></span><br>
+                        <a href="contact.html" class="footer-a">Contact Details</a>
+                    </div>
+                    <div class="column">
+                        <h3>Policies</h3>
+                        <span class="animate-border border-black"></span><br>
+                        <a href="shipping.html" class="footer-a">Shipping Policy</a><br>
+                        <a href="terms.html" class="footer-a">Terms of Service</a>
+                    </div>
+                </div>
+                <p id="copyright">Copyright &copy; 2022 SAVZ.CO</p>
+                <br>
+                    <div id="back-to-top" class="back-to-top">
+                        <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                            <a href="#top">&#8673;</a>
+                        </button>
+                    </div>
+            </footer>
+        </div>
+
+
+        <br><br>
+        <script src="" async defer></script>
+    </body>
+</html>
